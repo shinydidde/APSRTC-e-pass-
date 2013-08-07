@@ -1,0 +1,71 @@
+ create table comp(fdno int(10) auto_increment primary key,date varchar(30),message varchar(1000));
+ 
+ create table reg(appno int(10) auto_increment primary key,status varchar(20),rl varchar(7),date varchar(30),name varchar(20),surname varchar(20),email varchar(30) unique key,password varchar(20),dob varchar(10),institutecode varchar(10),institutename varchar(30
+),coursecode varchar(9),coursename varchar(10),admissionno varchar(20),hno varchar(10),street varchar(20),place varchar(20),mandal varchar(20),district varchar(20),phoneno varchar(
+10),lastlog varchar(35));
+
+
+
+
+
+
+create table admin(admno int(10) auto_increment primary key,user varchar(10),password varchar(10),dt date);
+
+create table feedback(fdno int(10) auto_increment primary key,date varchar(30),name varchar(20),message varchar(100));
+
+
+
+
+
+
+
+create table renew(appno int(10) ,passno integer(10) auto_increment primary key,status varchar(20),email varchar(20)  ,duration varchar(20),src varchar(20),destin varchar(20),dat varchar(30),expdt varchar(30));
+
+
+
+create table rtinfo(dt varchar(30),rtno int(10) auto_increment primary key,st varchar(10),src varchar(20),dest varchar(20),6amt int(4),3amt int (4),1amt int(4));
+
+
+
+create table nsev(no int(10) auto_increment primary key,status varchar(20),date varchar(30),nsev varchar(1300));
+
+create table notif(no int(10) auto_increment primary key,status varchar(20),date varchar(30),notif varchar(1300));
+
+
+
+
+CREATE TABLE Orders
+(
+OrderId int NOT NULL,
+ProductName varchar(50) NOT NULL,
+OrderDate datetime NOT NULL DEFAULT CURDATE());
+
+
+SELECT DATE_ADD('2013-07-14', INTERVAL 6 MONTH);
+
+
+
+
+
+
+
+ select max(passno) from renew where passno in (select passno from renew where email='lakshmi@gmail.com');
+ 
+ 
+ 
+ 
+ update renew set expdt=date_add(now(),interval 3 month) where appno=1;
+ 
+ 
+  select distinct(dest) from rtinfo where src='kakinada';
+  
+  
+  update renew set status='yes' where email='lakshmi@gmail.com';
+  
+  String src1=session.getAttribute("src").toString();
+String dest1=request.getParameter("to");
+String dur1=request.getParameter("dur");
+
+
+
+update renew set expdt=date_add(now(),interval 3 month) where appno in (select max(passno) from renew where passno in (select passno from renew where email='lakshmi@gmail.com'));

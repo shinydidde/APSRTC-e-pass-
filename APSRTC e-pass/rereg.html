@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Apsrtc e-buspass</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script src="js/jquery-1.6.js" ></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/Josefin_Sans_400.font.js"></script>
+<script src="js/Tangerine_700.font.js"></script>
+<script src="js/atooltip.jquery.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/script.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<style type="text/css">.aToolTip, .box1, .box1 .inner, .button, .button strong{behavior:url("js/PIE.htc");}</style>
+<![endif]-->
+<script>
+
+ 
+function load_random()
+{
+ var str="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+var ran1="";
+for(i=0;i<8;i++)
+{
+ index=Math.round(Math.random()*(str.length-1));
+ran1+=str[index];
+}
+document.getElementById('ran').innerHTML=ran1;
+}
+
+
+
+
+
+
+
+
+function validate()
+{
+
+
+var icode1=document.myForm.icode.value;
+var iname1=document.myForm.iname.value;
+var ccode1=document.myForm.ccode.value;
+var cname1=document.myForm.cname.value;
+var adm1=document.myForm.adm.value;
+var hno1=document.myForm.hno.value;
+var str1=document.myForm.street.value;
+var vil1=document.myForm.vil.value;
+var man1=document.myForm.man.value;
+var dist1=document.myForm.dist.value;
+var pno1=document.myForm.pno.value;
+var mobile = document.myForm.mno.value;
+
+count=0;
+
+       
+       	           if(mobile==null || mobile=="") 
+  	              {
+ 	                document.getElementById("mobile_error").innerHTML="Enter Your Mobile Number";
+                               count++;
+	              }
+       	                
+                     if(icode1==null || icode1=="") 
+  		    {
+ 		      document.getElementById("ic_error").innerHTML="Enter Your institution code";
+                                         count++;
+      		    }
+                     if(iname1==null || iname1=="") 
+  		    {
+ 		      document.getElementById("in_error").innerHTML="Enter Your institution name";
+                                         count++;
+      		    }
+                    if(ccode1==null || ccode1=="") 
+  		    {
+ 		      document.getElementById("cc_error").innerHTML="Enter Your course code";
+                                         count++;
+      		    }
+                    if(cname1==null || cname1=="") 
+  		    {
+ 		      document.getElementById("cn_error").innerHTML="Enter Your course name";
+                                         count++;
+      		    } 
+                    if(adm1==null || adm1=="") 
+  		    {
+ 		      document.getElementById("adm_error").innerHTML="Enter Your admission number";
+                                         count++;
+      		    }
+                    if(cname1==null || cname1=="") 
+  		    {
+ 		      document.getElementById("cn_error").innerHTML="Enter Your course name";
+                                         count++;
+      		    }
+ if(hno1==null || hno1=="") 
+         {
+           document.getElementById("h_error").innerHTML="Enter the house number";
+       count++;
+        }
+if(str1==null || str1=="") 
+         {
+           document.getElementById("s_error").innerHTML="Enter the street name";
+       count++;
+        }
+if(vil1==null || vil1=="") 
+         {
+           document.getElementById("v_error").innerHTML="Enter the place name";
+       count++;
+        }
+
+if(man1==null || man1=="") 
+         {
+           document.getElementById("m_error").innerHTML="Enter the mandal name";
+       count++;
+        }
+if(dist1==null || dist1=="") 
+         {
+           document.getElementById("d_error").innerHTML="Enter the district name";
+       count++;
+        }
+if(pno1==null || pno1=="") 
+         {
+           document.getElementById("p_error").innerHTML="Enter the pincode";
+       count++;
+        }var ph=/[0-9]{10}$/
+ 
+  var res3=ph.test(mobile);
+  if(res3==false)
+  alert("Phone number should contain 10 digits only");
+
+if(count!=0)
+               return false;
+           else
+        return true;
+}
+
+
+</script>
+<style>
+.error
+{
+color:white;
+font-size:14pt;
+}
+ .txt1
+{
+ font-size:15pt;
+font-family:"verdana";
+color:gery;
+}
+</style>
+</head>
+<body id="page6">
+<div class="body1">
+  <div class="main">
+    <!-- header -->
+    <header>
+      <div class="wrapper">
+        <ul id="icons">
+          <li><a href="www.facebook.com" class="normaltip"><img src="images/icon1.png" alt=""></a></li>
+          <li><a href="www.twitter.com" class="normaltip"><img src="images/icon2.png" alt=""></a></li>
+          <li><a href="#" class="normaltip"><img src="images/icon3.png" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="wrapper">
+        <h1><a href="index.html" id="logo"></a></h1>
+        <nav>
+          <ul id="menu">
+            <li class="first"><a href="index.html">Home </a></li>
+            <li id="menu_active"><a href="login.html">Login</a></li>
+            <li><a href="feedback.jsp">Feedback</a></li>
+            <li><a href="comp1.jsp">Complaints</a></li>
+            <li><a href="logout.jsp">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- / header -->
+  </div>
+</div>
+<div class="body3-2">
+  <div class="main">
+    <!-- content -->
+  <form   action="reregister.jsp" method="post" name="myForm" onsubmit="return validate()">
+<br><center><h3>...CHANGE DETAILS...</h3><br><br><br>
+<table align='center'>
+<tr>
+   <td><label class="txt1">Institution Code:<label></td>
+   <td><input type='text' name='icode' maxlength='10'></td>
+   <td width="200px"><span id="ic_error" class="error">&nbsp;</span></td>
+</tr>
+<tr>
+   <td><label class="txt1">Institution Name:<label></td>
+   <td><input type='text' name='iname' maxlength='30'></td>
+   <td width="200px"><span id="in_error" class="error">&nbsp;</span></td>
+</tr>
+<tr>
+   <td><label class="txt1">Course Code:<label></td>
+   <td><input type='text' name='ccode' maxlength='10'></td>
+   <td width="200px"><span id="cc_error" class="error">&nbsp;</span></td>
+</tr>
+<tr><td><a href="codes.pdf" target="_blank"><b>Course Codes</b></a></td></tr>
+<tr>
+   <td><label class="txt1">Course Name:<label></td>
+   <td><input type='text' name='cname' maxlength='10'></td>
+
+   <td width="200px"><span id="cn_error" class="error">&nbsp;</span></td>
+</tr>
+
+<tr>
+   <td><label class="txt1">Admission no:<label></td>
+   <td><input type='text' name='adm' maxlength='15'></td>
+   <td width="200px"><span id="adm_error" class="error">&nbsp;</span></td>
+</tr><tr></tr>
+<tr><td><label class="txt1"><b>Residential Address:</b><label></td></tr><tr></tr>
+   <tr><td><label class="txt1">House no:</td><td><input  type='text' name='hno'></td>
+      <td width="200px"><span id="h_error" class="error">&nbsp;</span></td>
+   </tr>
+   <tr><td><label class="txt1">Street Name:<label></td><td><input  type='text' name='street'></td>
+      <td width="200px"><span id="s_error" class="error">&nbsp;</span></td>
+   </tr>
+   <tr><td><label class="txt1">Place:<label></td><td><input  type='text' name='vil'></td>
+      <td width="200px"><span id="v_error" class="error">&nbsp;</span></td>
+   </tr>
+   <tr><td><label class="txt1">Mandal:<label></td><td><input  type='text' name='man'></td>
+      <td width="200px"><span id="m_error" class="error">&nbsp;</span></td>
+   </tr>
+   <tr><td><label class="txt1">Distict:<label></td><td><input  type='text' name='dist'></td>
+      <td width="200px"><span id="d_error" class="error">&nbsp;</span></td>
+   </tr>
+   <tr><td><label class="txt1">Pincode:<label></td><td><input  type='text' name='pno'></td>
+      <td width="200px"><span id="p_error" class="error">&nbsp;</span></td>
+   </tr>
+<tr>
+   <td><label class="txt1">Mobile no:<label></td>
+   <td><input placeholder="10 digits only" type='text' name='mno' maxlength='10' ></td>
+      <td width="200px"><span id="mobile_error" class="error">&nbsp;</span></td>
+</tr>
+
+
+<tr>
+<td><label id="ran" name="rand "style="font-size:16pt;color:blue">&nbsp;</label> </td>
+<td><input  placeholder="Type Here"type='text' name='random' ></td>
+</tr>
+<tr>
+   <td colspan="3" ALIGN='CENTER'>
+   <input type='submit' value='    OK   '>
+   <input type='reset' value='RESET'></td>
+</tr>
+</table></center><br><br><br><br><br><br><br><br>
+</form>
+<center><a href="userlog.jsp">BACK</a><center><br><br>
+    <!-- content / -->
+  </div>
+</div>
+<div class="body2">
+  <div class="main">
+    <!-- footer -->
+    <footer>Copyright &copy; <a href="#">APSRTC E-BUSPASS</a> All Rights Reserved<br>
+      Design by <a target="_blank" href="http://www.templatemonster.com/">Team 5</a></footer>
+    <!-- / footer -->
+  </div>
+</div>
+<script>Cufon.now();</script>
+<script>
+$(window).load(function () {
+    $('.slider').nivoSlider({
+        effect: 'fold', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft' 
+        slices: 17,
+        animSpeed: 500,
+        pauseTime: 8000,
+        startSlide: 0, //Set starting Slide (0 index)
+        directionNav: true, //Next & Prev
+        directionNavHide: false, //Only show on hover
+        controlNav: true, //1,2,3...
+        controlNavThumbs: false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel: false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav: true, //Use left & right arrows
+        pauseOnHover: true, //Stop animation while hovering
+        manualAdvance: false, //Force manual transitions
+        captionOpacity: 1, //Universal caption opacity
+        beforeChange: function () {},
+        afterChange: function () {
+            Cufon.refresh();
+        },
+        slideshowEnd: function () {} //Triggers after all slides have been shown
+    });
+});
+</script>
+<div align=center>This Website is developed by <a href='http://www.mcr.org.in/'>Aditya 4th IT Team 5</a></div></body>
+</html>

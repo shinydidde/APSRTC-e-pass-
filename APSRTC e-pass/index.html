@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>APSRTC E-Pass</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script src="js/jquery-1.6.js" ></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/Josefin_Sans_400.font.js"></script>
+<script src="js/Tangerine_700.font.js"></script>
+<script src="js/atooltip.jquery.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/script.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<style type="text/css">.aToolTip, .box1, .box1 .inner{behavior:url("js/PIE.htc");}</style>
+<![endif]-->
+</head>
+<body id="page1">
+<div class="body1">
+  <div class="main">
+    <!-- header -->
+    <header>
+      <div class="wrapper">
+        <ul id="icons">
+          <li><a target="_blank" href="https://www.facebook.com/apsrtc/" class="normaltip"><img src="images/icon1.png" alt=""></a></li>
+          <li><a target="_blank" href="https://www.twitter.com/apsrtc/" class="normaltip"><img src="images/icon2.png" alt=""></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/apsrtc/" class="normaltip"><img src="images/icon3.png" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="wrapper">
+       <h1><a href="index.html" id="logo"></a></h1>
+        <nav>
+          <ul id="menu">
+            <li class="first" id="menu_active"><a href="index.html">Home </a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="information1.html">Info</a></li>
+       
+            <li><a href="contacts.html">Contacts</a></li>
+
+          </ul>
+        </nav>
+      </div>
+      <div class="slider_box">
+        <div class="slider"> <img src="buses/img1.jpg" alt="" title=""> <img src="buses/img2.jpg" alt="" title=""> <img src="buses/img3.jpg" alt="" title=""> <img src="buses/img4.jpg" alt="" title=""> <img src="buses/img5.jpg" alt="" title=""> </div>
+      </div>
+    </header>
+    <!-- / header -->
+  </div>
+</div>
+<div class="body3">
+  <div class="main">
+    <!-- content -->
+    <article id="content">
+      <div class="wrapper">
+        <div class="pad">
+          <h2>Welcome to <span>Apsrtc e-buspass</span></h2>
+            <p><b>APSRTC</b> is committed to provide consistently high quality of services and to continuously improve the services through a process of teamwork for the utmost satisfaction of the passengers and to attain a position of pre-eminence in the Bus Transport sector.</p>
+            <p><b>Corporate Philosophy</b>
+                -To provide safe, clean, comfortable, punctual and courteous commuter service at an economic fare.
+                -To provide employee satisfaction in financial and humanistic terms.
+                -To attain a position of reputation and respect in the society.</p> 
+         <br><br><center><figure><a href="#"><img src="buses/2.gif" width="150" height="150" alt=""></a></figure></center><br>
+		</div>
+      </div>
+      <div class="wrapper">
+        <div class="pad_left1">
+          <section class="cols">
+            <div class="box1">
+              <div class="inner">
+                <h2>Notifications<span></span></h2>
+                <div class="wrapper"> <span class="dropcap1">01</span>
+                  <div class="col1">
+                    <p> <a href="#" class="link1"></a><br>
+                APSRTC, on Saturday, said that candidates to be called for interviews for para-medical posts have been provisionally shortlisted.</p>
+                  </div>
+                </div>
+                <div class="wrapper"> <span class="dropcap1">02</span>
+                  <div class="col1"> <a href="#" class="link1"></a><br>
+                  .Verification of the original certificates will be held on July 22, at Bus Bhavan.<br><br><center><a href="shownf.jsp">more</a></center>
+ </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="cols pad_left2">
+            <div class="box1">
+              <div class="inner">
+                <h2>News & Events <span></span></h2>
+                <div class="wrapper">
+               
+                  <p> For seamless and comfortable journey, APSRTC will deploy ultra-modern brand new Garuda Volvo buses. This bus service will provide quality service with all the comforts like A/C, Video, Drinking Water, Tissue Paper and Newspapers. The service will have two stops viz. L.B. Nagar and Suryapet and the one way ticket fare of the same will be Rs.  400/-.</p> </div><br><br><center><a href="showne.jsp">more</a></center>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+    <!-- content / -->
+  </div>
+</div>
+<div class="body2">
+  <div class="main">
+    <!-- footer -->
+    <footer>Copyright &copy; <a href="#">APSRTC E-BUSPASS</a> All Rights Reserved<br>
+      Design by <a target="_blank" href="index.html">IV IT Students Of Aditya Engg.College</a></footer>
+    <!-- / footer -->
+  </div>
+</div>
+<script>Cufon.now();</script>
+<script>
+$(window).load(function () {
+    $('.slider').nivoSlider({
+        effect: 'fold', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft' 
+        slices: 17,
+        animSpeed: 500,
+        pauseTime: 8000,
+        startSlide: 0, //Set starting Slide (0 index)
+        directionNav: true, //Next & Prev
+        directionNavHide: false, //Only show on hover
+        controlNav: true, //1,2,3...
+        controlNavThumbs: false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel: false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav: true, //Use left & right arrows
+        pauseOnHover: true, //Stop animation while hovering
+        manualAdvance: false, //Force manual transitions
+        captionOpacity: 1, //Universal caption opacity
+        beforeChange: function () {},
+        afterChange: function () {
+            Cufon.refresh();
+        },
+        slideshowEnd: function () {} //Triggers after all slides have been shown
+    });
+});
+</script>
+<div align=center>This Website is developed by <a href='index.html'>IV IT Students Of Aditya Engg.College</a></div></body>
+</html>
